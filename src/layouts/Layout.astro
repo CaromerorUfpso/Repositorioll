@@ -17,34 +17,103 @@ const { title } = Astro.props;
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<!--slot />--->
+		<header class="header h-20 bg-[rgba(23,29,37,255)]  ">
+			<div class="container max-w-[1200px] mx-auto ">
+				<div class="flex-menu flex h-20 w-[60%] float-left items-center font-sans uppercase ">
+					<img class="w-[160px] "
+						src="https://store.akamai.steamstatic.com/public/shared/images/header/logo_steam.svg?t=962016"
+					/>
+					<menu>
+						<li class="inline-block list-none m-[10px] "><a class="text-[#DCDEDF] font-semibold hover:text-[#e1edf3] " href="#">Tienda</a></li>
+						<li class="inline-block list-none m-[10px] "><a class="text-[#DCDEDF] font-semibold hover:text-[#e1edf3] " href="#">Comunidad</a></li>
+						<li class="inline-block list-none m-[10px] "><a class="text-[#DCDEDF] font-semibold hover:text-[#e1edf3] " href="#">Acerca de</a></li>
+						<li class="inline-block list-none m-[10px] "><a class="text-[#DCDEDF] font-semibold hover:text-[#e1edf3] " href="#">Soporte</a></li>
+					</menu>
+				</div>
+				<div class="menu-right float-left w-[40%] my-2	text-[#DCDEDF] font-sans ">
+					<a href="#" class="btn-download m-[0 6px] text-[#f8eeee] no-underline bg-[#789806] inline-block p-[6px 12px] font-sans no-underline inline-flex items-center gap-[8px] hover: bg-[#a2cc09]">
+						<svg inline-block list-none ml-2.5 
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="size-6 w-[18px]"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3"
+							></path>
+						</svg>
+
+						Instalar Steam
+					</a>
+					<a class="m-[0 6px] text-[#f8eeee] no-underline" href="#">Iniciar Sesión</a>
+					|
+					<a class="m-[0 6px] text-[#f8eeee] no-underline" href="#">Idioma</a>
+				</div>
+			</div>
+		</header>
+		<div class="banner bg-[orange] h-[360px]"></div>
+		<div class="left-menu float-left z-[1]"></div>
+		<div class="banner2 container  max-w-[1200px] mx-auto relative bg-[purple] h-[240px] "></div>
+
+		<div class="banner3"></div>
+		<div
+			class="group hover:cursor-pointer duration-300 transition-colors hover: rounded py-2 px-4 text-white/80 inline-flex bg-blue-500"
+		>
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="size-4 mr-1 mt-1 group-hover:animate-spin"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99"
+				></path>
+			</svg>
+
+			Presioname!
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke-width="1.5"
+				stroke="currentColor"
+				class="size-4 mt-[4.5px] ml-1"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					d="M17.25 8.25 21 12m0 0-3.75 3.75M21 12H3"></path>
+			</svg>
+		</div>
 	</body>
 </html>
-<style is:global>
-	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+<!-- 
+<style>
+	html. body {
+		padding: 0;
+		margin: 0;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
+	.left-menu {
+		float: left;
+		z-index: 1; /////////////////////////////////////////////////////////////////////////////
+		left: calc(((100% - 1200px) / 2) - 180px);
+		background: pink;
+		width: 180px;
+		height: 360px;
+		position: sticky;
+		top: 0;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+	.banner3 {
+		background-color: turquoise;
+		height: 1200px;
 	}
-</style>
+</style> -->
